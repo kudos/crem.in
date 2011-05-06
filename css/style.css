@@ -1,0 +1,319 @@
+/*
+Theme Name: Arizona
+Theme URI: http://crem.in/
+Version: 1.0
+Description: A two and a half column, minimalistic layout using only a single image.
+Author: Jonathan Cremin
+Author URI: http://crem.in
+*/
+
+/***** Global Settings *****/
+ 
+html, body {
+border:0;
+margin:0;
+padding:0;
+}
+ 
+body {
+font:100%/1.25 'Droid Sans', arial, sans-serif;
+color: #333
+}
+ 
+/***** Common Formatting *****/
+ 
+h1, h2, h3, h4, h5, h6 {
+margin:0;
+padding:0;
+font-weight:normal;
+}
+ 
+h1 {
+padding:30px 0 25px 0;
+letter-spacing:-1px;
+font:2em helvetica, arial, sans-serif;
+}
+ 
+h2 {
+padding:20px 0;
+letter-spacing:-1px;
+font:1.5em helvetica, arial, sans-serif;
+}
+ 
+h3 {
+font:1em helvetica, arial, sans-serif;
+font-weight:bold;
+margin-bottom: .5em;
+}
+ 
+p, ul, ol {
+margin:0;
+padding:0 0 18px 0;
+}
+ 
+ul, ol {
+list-style:none;
+padding:0;
+}
+ 
+blockquote {
+margin: 0 18px 18px 0; 
+padding:0;
+padding-left: 15px;
+border-left: 3px solid #666;
+color: #666;
+}
+ 
+small {
+font-size:0.85em;
+}
+ 
+img {
+border:0;
+}
+ 
+sup {
+position:relative;
+bottom:0.3em;
+vertical-align:baseline;
+}
+ 
+sub {
+position:relative;
+bottom:-0.2em;
+vertical-align:baseline;
+}
+ 
+acronym, abbr {
+cursor:help;
+letter-spacing:1px;
+border-bottom:1px dashed;
+}
+ 
+/***** Links *****/
+ 
+a, a:visited {
+text-decoration:none;
+color: #A03922;
+}
+ 
+/***** Forms *****/
+ 
+form {
+margin:0;
+padding:0;
+display:inline;
+}
+ 
+input, select, textarea {
+font:1em helvetica, arial, sans-serif;
+}
+ 
+textarea {
+line-height:1.25;
+}
+ 
+label {
+cursor:pointer;
+}
+ 
+/***** Tables *****/
+ 
+table {
+border:0;
+margin:0 0 18px 0;
+padding:0;
+}
+ 
+  table tr td {
+  padding:2px;
+  }
+ 
+/***** Wrapper *****/
+ 
+#page {
+width:870px;
+margin-left: 20px;
+padding-top: 20px;
+}
+ 
+/***** Global Classes *****/
+ 
+.clear         { clear:both; }
+ 
+.float-left    { float:left; }
+.float-right   { float:right; }
+ 
+.text-left     { text-align:left; }
+.text-right    { text-align:right; }
+.text-center   { text-align:center; }
+.text-justify  { text-align:justify; }
+ 
+.bold          { font-weight:bold; }
+.italic        { font-style:italic; }
+.underline     { border-bottom:1px solid; }
+.highlight     { background:#ffc; }
+ 
+.wrap          { width:960px;margin:0 auto; }
+ 
+.img-left      { float:left;margin:4px 10px 4px 0; }
+.img-right     { float:right;margin:4px 0 4px 10px; }
+ 
+.nopadding     { padding:0; }
+.noindent      { margin-left:0;padding-left:0; }
+.nobullet      { list-style:none;list-style-image:none; }
+
+#sidebar1
+{
+    clear: left;
+}
+.sidecol{
+    width: 300px;
+    float: left;
+    margin-right: 8px;
+}
+.sidecol h2{
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+    font-size: 15px;
+    font-family: "Droid Sans", helvetica, arial, sans-serif;
+}
+.sidecol li{
+    font-size: 14px;
+}
+.sidecol a:hover{
+    background-color: #DDD;
+}
+#content{
+    width: 500px;
+    float: right;
+    padding-bottom: 60px;
+}
+#header{
+    text-align: center;
+    width: 336px;
+    float: left;
+}
+#header h1 a{
+    font-family: "Ubuntu", Arial, Serif;
+    font-size: 44px;
+    color: #A03922;
+}
+#header h1{
+    padding: 0px;
+    margin: 0px;
+}
+#header p{
+    margin-top: -6px;
+    padding-bottom: 0px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #444;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    font-family: "Droid Sans", helvetica, arial, sans-serif;
+}
+#header img{
+    border-radius: 3px;
+}
+.post h2 a{
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #444;
+    font-family: "Droid Sans", helvetica, arial, sans-serif;
+}
+.post h2{
+    padding: 0px;
+    margin: 0px;
+}
+.post h3{
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #444;
+    font-family: "Droid Sans", helvetica, arial, sans-serif;
+}
+
+.post{
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+.post li{
+    list-style: disc;
+    margin-left: 20px;
+    padding-bottom: 4px;
+}
+.entry{
+    text-align: justify;
+}
+.post a:hover{
+    background-color:#DDD;
+}
+.post h2 a:hover{
+    background: none;
+}
+#footer{
+    padding-top: 20px;
+    width: 336px;
+    clear: left;
+    font-size: 12px;
+}
+small{
+    font-size: 12px;
+}
+p{
+    line-height: 20px;
+}
+#comments{
+    margin-bottom: 20px;
+}
+.commentlist{
+    font-size: 14px;
+}
+.commentlist li{
+    padding: 10px;
+}
+.postmetadata{
+    background: #EEE;
+    padding: 10px;
+}
+.alt{
+    background-color: #EEE;
+}
+#bio{
+    padding-bottom: 20px;
+    clear: left;
+    width: 336px;
+    font-size: 14px;
+    text-align: justify;
+}
+
+table{
+    padding: 15px;
+    color: #877f4e;
+}
+.post ul
+{
+    list-style:disc ;
+    padding: 0 0 18px 18px;
+}
+.post .meta{
+    margin-bottom: 7px;
+}
+code{
+    margin-left: 15px;
+    display: block;
+    font-family: "Inconsolata", Arial, serif;
+}
+a:hover{
+    -moz-transition-duration: color .5s ease-in;
+    -webkit-transition: color .5s ease-in;
+ 	-o-transition: color .5s ease-in;
+}

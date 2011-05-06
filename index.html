@@ -1,0 +1,22 @@
+---
+layout: default
+title: Jonathan Cremin
+---
+{% assign first_post = site.posts.first %}
+<div class="post">
+  <h2><a href="{{ first_post.url }}">{{ first_post.title }}</a></h2>
+  <div class='meta'><small>Published {{ first_post.date | date_to_string }}</small></div>
+  <div class="entry">
+  {{ first_post.content }}
+  <a id="more" href="{{ first_post.url }}#disqus">Comments &raquo;</a>
+  </div>
+</div>
+
+<hr />
+
+<h2>archive</h2>
+<ul id="archive">
+{% for post in site.posts %}
+<li><a href="{{ post.url }}">{{ post.title }}</a><abbr>{{ post.date | date_to_string }}</abbr></li>
+{% endfor %}
+</ul>
