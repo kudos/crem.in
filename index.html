@@ -1,21 +1,35 @@
 ---
 layout: default
-title: Jonathan Cremin
+title: Jonathan Cremin &ndash; Web Hacker/Engineer/Developer
 ---
+<header>
+			<h1><a href="/">Jonathan Cremin</a> <small>Looking to get in touch? Email me at <a href="mailto:jon@crem.in">jon@crem.in</a></small></h1>
+			<!-- About -->
+			<div id="about">
+				Jonathan is full-stack web hacker/engineer/developer. Living in Dublin, Ireland and working at Web Reservations International. He works on open source, web server stacks, XHTML/CSS, JavaScript and enjoys playing with the latest trends in technology. Jonathan's a sucker for good UX and design. He's also the founder of Localhostr and Minthost.
+			</div>
+		</header>
+
+		<hr />
+
+		<div id="main" role="main">
 {% assign first_post = site.posts.first %}
-<div class="post">
-  <h2><a href="{{ first_post.url }}">{{ first_post.title }}</a></h2>
-  <div class='meta'><small>Published {{ first_post.date | date_to_string }}</small></div>
-  <div class="entry">
-  {{ first_post.content }}
-  <a id="more" href="{{ first_post.url }}#disqus">Comments &raquo;</a>
-  </div>
-</div>
+			<div class="post">
+				<h2>Latest Post</h2>
+				<h2><a href="{{ first_post.url }}">{{ first_post.title }}</a> <small>Published {{ first_post.date | date_to_string }}</small></h2>
+				
+				<div class="entry">
+				{{ first_post.content }}
+			
+			  <a id="more" href="{{ first_post.url }}#disqus">Comments &raquo;</a>
+			  </div>
+			
+			</div>
 
 <hr />
 
 <h2>Previous Posts</h2>
-<ul>
+<ul class="unstyled">
 {% for post in site.posts %}
 <li><small>{{ post.date | date_to_string }}</small> <a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}

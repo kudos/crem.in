@@ -1,19 +1,31 @@
 ---
 layout: default
 ---
+<header>
+	<h1><a href="/">Jonathan Cremin</a> <small>Looking to get in touch? Email me at <a href="mailto:jon@crem.in">jon@crem.in</a></small></h1>
+</header>
+
+<hr />
+
+<div id="main" role="main">
 <div class="post">
-  <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
-  <div class='meta'><small>Published {{ page.date | date_to_string }}</small></div>
-  <div class="entry">
-  {{ page.content }}
-  </div>
+	<h2><a href="{{ page.url }}">{{ page.title }}</a> <small>Published {{ page.date | date_to_string }}</small></h2>
+	
+	<div class="entry">
+	{{ content }}
+	
+	<a id="more" href="{{ page.url }}#disqus">Comments &raquo;</a>
+	</div>
+	
 </div>
+
+<hr />
 
 <div id="related">
   <h2>Related Posts</h2>
-  <ul class="posts">
+  <ul class="unstyled">
     {% for post in site.related_posts limit:3 %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+      <li><small>{{ post.date | date_to_string }}</small> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
 </div>
