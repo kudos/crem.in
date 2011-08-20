@@ -215,11 +215,12 @@ div.twipsy .twipsy-arrow{position:absolute;width:0;height:0;}
 .popover .content{background-color:#ffffff;padding:14px;-webkit-border-radius:0 0 3px 3px;-moz-border-radius:0 0 3px 3px;border-radius:0 0 3px 3px;-webkit-background-clip:padding;-moz-background-clip:padding;background-clip:padding;}.popover .content p,.popover .content ul,.popover .content ol{margin-bottom:0;}
 
 
-
-.container{
-	padding-top: 40px;
+.container-fluid{
+	max-width: 940px;
+	margin: 0 auto;
 }
 header{
+	margin-top: 40px;
 	margin-bottom: 40px;
 }
 h2{
@@ -232,6 +233,7 @@ h2{
 	font-size:18px;
 	
 }
+#about a {font-weight: bold;}
 .post{
 	margin-top: 40px;
 	margin-bottom: 40px;
