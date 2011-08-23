@@ -223,6 +223,12 @@ header{
 	margin-top: 40px;
 	margin-bottom: 40px;
 }
+
+header h1 small{
+	line-height: 36px;
+	float:right;
+}
+
 h2{
 	padding-bottom: 10px;
 }
