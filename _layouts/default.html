@@ -1,34 +1,35 @@
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	
-	<title>Jonathan Cremin &mdash; Web Hacker/Engineer/Developer</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/css/style.css">
-	<link rel="openid.server" href="http://crem.in/openid/index.php" />
-	<link rel="openid.delegate" href="http://crem.in/openid/index.php" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Jonathan Cremin &ndash; {{ page.title }}</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-	<div class="container-fluid">
-	
-			<!-- Post -->
-			{{ content }}
-			
-		<footer>
-		<small>Design and content &copy; 2011 Jonathan Cremin</small>
-		</footer>
-	</div>
+  <div class="container">
 
-	<script>
-		var _gaq=[['_setAccount','UA-66209-1'],['_trackPageview'],['_trackPageLoadTime']];
-		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-		s.parentNode.insertBefore(g,s)}(document,'script'));
-	</script>
+      <!-- Post -->
+      {{ content }}
+
+    <footer>
+      <hr />
+      Design and content &copy; Jonathan Cremin &ndash; <a href="https://github.com/kudos/crem.in">Fork the design on Github</a>.
+    </footer>
+  </div>
+
+  <script>
+    var _gaq=[['_setAccount','UA-66209-1'],['_trackPageview'],['_trackPageLoadTime']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
 </body>
 </html>

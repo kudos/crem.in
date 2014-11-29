@@ -5,6 +5,7 @@ title: iPhone 3G
 wordpress_url: http://crem.in/?p=18
 ---
 I'm sure you've all heard about the new iPhone by now, with 3G and GPS built in it's finally a phone I want. It's going to be available in Ireland through O2 costing &euro;169 on their lowest plan (&euro;49/m) and will be in shops on the 11th of July. The full price plans are as follows:
+
 <table>	
 <tr><td></td><td>iPhone 175</td><td>iPhone 350</td><td>iPhone 700</td></tr>
 <tr><td>8 GB 3G iPhone</td><td>&euro;169</td><td>&euro;99</td><td>&euro;49</td></tr>
@@ -17,4 +18,5 @@ I'm sure you've all heard about the new iPhone by now, with 3G and GPS built in 
 <tr><td>Additional texts</td><td>10c</td><td>10c</td><td>10c</td></tr>
 </table>
  
-I didn't understand the hype of the first iPhone release, but they certainly have me caught up this time.
+ 
+I didn't understand the hype of the first iPhone release, but they certainly have me caught up in it this time.

@@ -1,36 +1,42 @@
 ---
 layout: default
-title: Jonathan Cremin &ndash; Web Hacker/Engineer/Developer
+title: Engineer on the Web, iOS and Mac
 ---
-<header>
-			<h1><a href="/">Jonathan Cremin</a> <small>Want to get in touch? Email me at <a href="mailto:jonathan@crem.in">jonathan@crem.in</a></small></h1>
-			<!-- About -->
-			<div id="about">
-				Jonathan is full-stack web hacker/engineer/developer living in Dublin, Ireland and working at <a href="http://www.hostelworld.com">Hostelworld</a>. He works on open source, web server stacks, XHTML/CSS, JavaScript and enjoys discovering new technologies. Jonathan's a sucker for good UX and design. He's also the founder of <a href="http://localhostr.com">Localhostr</a> and <a href="https://minthost.com">Minthost</a>.
-			</div>
-		</header>
-
-		<hr />
-
-		<div id="main" role="main">
-{% assign first_post = site.posts.first %}
-			<div class="post">
-				<h2>Latest Post</h2>
-				<h2><a href="{{ first_post.url }}">{{ first_post.title }}</a> <small>Published {{ first_post.date | date_to_string }}</small></h2>
-				
-				<div class="entry">
-				{{ first_post.content }}
-			
-			  <a id="more" href="{{ first_post.url }}#disqus">Comments &raquo;</a>
-			  </div>
-			
-			</div>
+<header class="home_header">
+  <h1><a href="/">Jonathan Cremin</a></h1>
+  <!-- About -->
+  <div id="about">
+    I'm a software engineer living in Dublin and available <a href="/resume">for hire</a>.
+    I build apps for Mac, iOS and the web.
+    I'm also the founder of <a href="https://hostr.co">Hostr</a>, deceptively simple file sharing.
+    Want to get in touch? Email <a href="mailto:jonathan@crem.in">jonathan@crem.in</a> or tweet <a href="https://twitter.com/kudoz">@kudoz</a>.
+  </div>
+</header>
 
 <hr />
 
-<h2>Previous Posts</h2>
-<ul class="unstyled">
-{% for post in site.posts %}
-<li><a href="{{ post.url }}">{{ post.title }}</a> <small>{{ post.date | date_to_string }}</small> </li>
-{% endfor %}
-</ul>
+<div id="main" role="main">
+
+{% assign first_post = site.posts.first %}
+  <div class="post">
+    <h3>Latest Post</h3>
+    <h2><a href="{{ first_post.url }}">{{ first_post.title }}</a></h2>
+
+    <div class="entry">
+    {% if first_post.content contains "<!-- more -->" %}
+      {{ first_post.content | split:"<!-- more -->" | first % }}
+      <p class="read-more"><a href="{{ first_post.url }}">Continue Reading</a></p>
+    {% else %}
+      {{ first_post.content }}
+    {% endif %}
+    </div>
+  </div>
+
+  <hr />
+
+  <h3>Recent Posts</h3>
+  <ul class="list-unstyled more">
+  {% for post in site.posts limit:3 %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+  </ul>

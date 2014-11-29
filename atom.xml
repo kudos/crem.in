@@ -1,17 +1,17 @@
 ---
-layout: nil
+
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- 
- <title>Litany Against Fear</title>
+
+ <title>Jonathan Cremin</title>
  <link href="http://crem.in/atom.xml" rel="self"/>
  <link href="http://crem.in/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>http://crem.in/</id>
  <author>
    <name>Jonathan Cremin</name>
-   <email>jon@crem.in</email>
+   <email>jonathan@crem.in</email>
  </author>
 
  {% for post in site.posts %}
@@ -23,5 +23,5 @@ layout: nil
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
- 
+
 </feed>

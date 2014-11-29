@@ -1,13 +1,13 @@
 --- 
 wordpress_id: 366
 layout: post
-title: "2011 \xE2\x80\x94 Things I'd like to get done."
+title: "2011 — Things I'd like to get done."
 wordpress_url: http://crem.in/?p=366
 ---
-<p><img src="/images/content/rocky.jpg" alt="" title="rocky" width="500" height="131" class="alignnone size-full wp-image-425" style="margin-bottom: 20px;" />I have a load of things I'd like to be working on, so many that I lose track and end up forgetting most of them. It's not quite the new year yet, but here's a short list of things I'd like to accomplish (in no particular order) in 2011:</p>
+<p><img src="/images/content/rocky.jpg" style="width:100%;margin-bottom: 20px" />I have a load of things I'd like to be working on, so many that I lose track and end up forgetting most of them. It's not quite the new year yet, but here's a short list of things I'd like to accomplish (in no particular order) in 2011:</p>
 <ul>
-	<li>Push the localhostr alpha site and API live.</li>
-	<li>Finish the localhostr Mac app, and write an Android one.</li>
+	<li>Push the Localhostr alpha site and API live.</li>
+	<li>Finish the Localhostr Mac app, and write an Android one.</li>
 	<li>Launch the <a href="http://minthost.com">Minthost</a> redesign that I have tucked away, together with SolusVM VPS offerings.</li>
 	<li>Build a content-rich site for Irish cinema listings using <a href="http://themoviedb.org">themoviedb.org</a>'s lovely API and hi-res images.</li>
 	<li>Write a PHP PECL Git extension, as much for the experience as the need for one.</li>

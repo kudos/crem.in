@@ -4,7 +4,7 @@ layout: post
 title: Now playing with screen+irssi over ssh
 wordpress_url: http://crem.in/?p=5
 ---
-<img src="/images/content/picture-2.png" alt="" title="irssi" width="499" height="90" class="no-border" />
+<img src="/images/content/picture-2.png" style="width: 100%" />
 <p>Some people like using irssi, others again like using it over ssh. When <a href="http://f0rked.com/articles/irssi">combined with screen</a>, this gives you a persistent IRC client that stays online even when you're not connected to your shell account.</p> While this is great, it does come with some caveats. Irssi can't access anything on your local machine, so status scripts, like what you are currently listening to, are out. In steps Brandon Fullers <a href="http://brandon.fuller.name/archives/hacks/nowplaying/">Now Playing</a> plugin for iTunes. The software itself isn't great, you can only transmit the song details over FTP, but it does work. The problem here is that I don't have FTP on the same box as irssi. Here's my solution:<!--more-->Set up now playing to upload your song details to your FTP server. Place the following PHP somewhere web accessible.
 <pre name="code" class="php">&lt;?php
 $file = "/path/to/Now_Playing.xml";
@@ -29,7 +29,7 @@ if ( is_file( $file ) ){
 	}
 	else
 	{
-	echo "np: nothing!";
+		echo "np: nothing!";
 	}
 }
 ?&gt;</pre>
