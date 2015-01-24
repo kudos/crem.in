@@ -155,12 +155,22 @@ footer hr {
   font-weight: 300;
 }
 .resume h3{
-font-size: 2.5rem;
+  font-size: 2.5rem;
   font-weight: 900;
 }
-.resume p {
-  margin-bottom: 10px;
+
+.resume .experience h3 {
+  margin-bottom: 0rem;
 }
+
+.resume p {
+  margin-bottom: 1rem;
+}
+
+.resume .projects p {
+  margin-bottom: 3rem;
+}
+
 .resume a{
   color: #000;
   text-decoration: underline;
