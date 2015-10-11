@@ -167,6 +167,27 @@ footer hr {
   margin-bottom: 1rem;
 }
 
+.resume .education small {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.6em;
+  border-radius: 2px;
+  padding: 2px 5px;
+  color: #fff;
+  opacity: 0.4;
+  line-height: 1em;
+  height: 1em;
+  vertical-align: middle;
+  margin-left: 1em;
+}
+
+.resume .education .complete {
+  background: #2ECC40;
+}
+
+.resume .education .in-progress {
+  background: #0074D9;
+}
+
 .resume .projects p {
   margin-bottom: 3rem;
 }
@@ -178,6 +199,7 @@ footer hr {
 .resume h1 a{
   text-decoration: none;
 }
+
 h3 small {
   font-size: 0.6em;
   font-weight: 400;
