@@ -29,7 +29,8 @@ layout: default
   <h3>Recent Posts</h3>
   <ul class="more">
     {% for post in site.related_posts limit:3 %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      <li><a href="{{ post.url }}">{{ post.title }}</a> <span class="date">— {{ post.date | date_to_string }}</span></li>
     {% endfor %}
+    <a href="/archive">More</a>
   </ul>
 </div>

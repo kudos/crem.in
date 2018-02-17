@@ -88,7 +88,11 @@ header h1 small{
   color: #aaa;
   font-size: 0.8em;
   text-align: right;
-  padding-bottom: 50px;
+}
+
+.date {
+  font-size: 0.8em;
+  color: #999;
 }
 
 .post h2, .post h1 {
@@ -229,4 +233,10 @@ blockquote p{
     margin-left: 0;
     width: 100%;
   }
+}
+
+figure {
+  margin: 0;
+  background: #333;
+  border-radius: 4px;
 }

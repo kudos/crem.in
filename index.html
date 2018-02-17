@@ -1,29 +1,16 @@
 ---
-layout: default
+layout: page
 title: Engineer on the Web, iOS and Mac
 ---
-<header class="home_header">
-  <h1><a href="/">Jonathan Cremin</a></h1>
-  <!-- About -->
-  <div id="about">
-    I'm a software engineer living in Dublin and working at <a href="https://www.udemy.com">Udemy</a>.
-    I build stuff for Mac, iOS, and the web, like <a href="https://hostr.co">Hostr</a> and <a href="https://match.audio">Match Audio</a>.
-    Want to get in touch? Email <a href="mailto:jonathan@crem.in">jonathan@crem.in</a> or tweet <a href="https://twitter.com/kudoz">@kudoz</a>.
-  </div>
-</header>
 
-<hr />
-
-<div id="main" role="main">
-
-{% assign first_post = site.posts.first %}
+  {% assign first_post = site.posts.first %}
   <div class="post">
     <h3>Latest Post</h3>
     <h2><a href="{{ first_post.url }}">{{ first_post.title }}</a></h2>
 
     <div class="entry">
     {% if first_post.content contains "<!-- more -->" %}
-      {{ first_post.content | split:"<!-- more -->" | first % }}
+      {{ first_post.content | split:"<!-- more -->" | first }}
       <p class="read-more"><a href="{{ first_post.url }}">Continue Reading</a></p>
     {% else %}
       {{ first_post.content }}
@@ -36,6 +23,7 @@ title: Engineer on the Web, iOS and Mac
   <h3>Recent Posts</h3>
   <ul class="list-unstyled more">
   {% for post in site.posts limit:3 %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    <li><a href="{{ post.url }}">{{ post.title }}</a> <span class="date">— {{ post.date | date_to_string }}</span></li>
   {% endfor %}
+  <a href="/archive">More</a>
   </ul>

@@ -312,7 +312,7 @@ code {
   font-size: 90%;
   white-space: nowrap;
   background: #F1F1F1;
-  border: 1px solid #E1E1E1;
+  border: none;
   border-radius: 4px; }
 pre > code {
   display: block;
