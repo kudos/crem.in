@@ -1,5 +1,6 @@
 import React from 'react';
 import GatsbyLink from 'gatsby-link';
+import moment from 'moment';
 
 import '../css/archive.css';
 
@@ -17,6 +18,7 @@ export default function Archive({ data }) {
               <GatsbyLink to={post.frontmatter.path}>
                 {post.frontmatter.title}
               </GatsbyLink>
+              <small> — {moment(post.frontmatter.date).format("Do MMM YYYY")}</small>
             </li>
           );
         })}

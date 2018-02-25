@@ -20,8 +20,8 @@ export default function Recent({ posts }) {
           );
         })}
       </ul>
-      <GatsbyLink to="/archive">
-        More
+      <GatsbyLink to="/archive" style={{ float: 'right' }}>
+        View More
       </GatsbyLink>
     </div>
   );
