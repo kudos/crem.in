@@ -9,7 +9,7 @@ tags:
 
 Unfortunately there's still a lot of CPU overhead and bugs, but in my unscientific testing reducing the number of files inside mounted volumes significantly mitigated both problems.
 
-<img src="./docker-node.png" class="full-image" alt="Docker and Node.js logos" />
+![Docker and Node.js logos](./docker-node.png)
 
 At [Udemy](https://www.udemy.com), we have a pretty hefty Django repository which also houses our frontend and it's build tools. This means a `package.json` and `node_modules` directory.
 

@@ -14,7 +14,7 @@ export default function Archive({ data }) {
         .filter((post, index) => post.node.frontmatter.title.length > 0 && index > 0)
         .map(({ node: post }) => {
           return (
-            <li>
+            <li key={post.id}>
               <GatsbyLink to={post.frontmatter.path}>
                 {post.frontmatter.title}
               </GatsbyLink>

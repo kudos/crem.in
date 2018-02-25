@@ -11,8 +11,6 @@ tags:
 
 It's a lot like Defunkt's now unmaintained [dotjs](https://github.com/defunkt/dotjs). It allows you to load local Javascript files into web pages based on the filename. It can load them from a directory of your choosing (like ~/.js) into web pages that match the domain, like google.com.js on www.google.com.
 
-<!-- more -->
-
 Unlike Dotjs, Punkjs doesn't require you to run a local web server, or add self-signed ssl root keys. Dotjs needs to do this to get around the pesky security feature of Chrome extensions that disallows filesystem access.
 
 Punkjs takes another approach. It uses a Chrome app, which *can* access the filesystem, as a sort of bridge to the filesystem for the extension. It is not a web server and doesn't listen on any TCP port. Instead the app and extension use the Chrome runtime messaging API.

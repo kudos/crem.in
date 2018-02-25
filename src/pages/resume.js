@@ -3,6 +3,9 @@ import GatsbyLink from 'gatsby-link';
 
 import photo from '../content/photo.jpg';
 
+import Octocat from 'react-icons/lib/go/mark-github';
+import InsertLink from 'react-icons/lib/md/insert-link';
+
 import '../css/resume.css';
 
 export default function Resume() {
@@ -10,7 +13,7 @@ export default function Resume() {
     <div className="resume">
       <p><a href="mailto:jonathan@crem.in">jonathan@crem.in</a> +353&nbsp;(0)86&nbsp;806&nbsp;8070</p>
       <div id="about">
-        I'm an experienced software engineering lead working primarily in distributed teams, with an interest in all aspects of web stacks.
+        I'm an experienced software engineering manager working primarily in distributed teams, with an interest in all aspects of web stacks.
         I'm active in the local tech community and have given talks on security, Javascript, frontend web performance and testing, Git and MongoDB.
       </div>
       <hr />
@@ -150,21 +153,21 @@ export default function Resume() {
       <div className="projects">
         <h2>Personal Projects</h2>
 
-        <h3><a href="https://hostr.co">Hostr</a></h3>
+        <h3>Hostr <a href="https://hostr.co" className='screen'><InsertLink size='1.5rem' color='#1EAEDB' /></a> <a href="https://github.com/kudos/hostr" className='screen'><Octocat size='1.5rem' color='#1EAEDB' /></a> <span className="print">(https://hostr.co)</span></h3>
         <p>With a slick interface, serving up over a billion downloads and with over a hundred thousand registered users, Hostr provides a quick and easy way to share files.
         </p>
         <p>This was a side project I started in 2006 and it's now open source.
         It's been through half a dozen total rewrites in 3 languages since then.
         I use it as a testbed for new technologies I want to play around with.</p>
-        <p>I've also built a companion Mac menu bar app with Cocoa/Obj-C and a never-released iOS app.</p>
+        <p>I've also built a companion <a href="https://github.com/kudos/hostr-mac">Mac menu bar app</a> with Cocoa/Obj-C and a never-released iOS app.</p>
 
-        <h3><a href="https://match.audio">Match Audio</a></h3>
-        <p>Match Audio takes links from various music subscription services and returns a page containing matching links to all other services to allow broader sharing.</p>
+        <h3>Combine.fm <a href="https://combine.fm" className='screen'><InsertLink size='1.5rem' color='#1EAEDB' /></a> <a href="https://github.com/kudos/combine.fm" className='screen'><Octocat size='1.5rem' color='#1EAEDB' /></a> <span className="print">(https://combine.fm)</span></h3>
+        <p>Combine.fm takes links from various music subscription services and returns a page containing matching links to all other services to allow broader sharing.</p>
 
         <p>I started this in December 2014 as an excuse to build something isomorphically with React.
           It has been developed from the beginning as an open source project.</p>
 
-        <h3><a href="https://github.com/kudos">Others <span className="print">(https://github.com/kudos)</span></a></h3>
+        <h3>Others <a href="https://github.com/kudos" className='screen'><Octocat size='1.5rem' color='#1EAEDB' /></a> <span className="print">(https://github.com/kudos)</span></h3>
         <p>I've published some other small projects on Github, including Python, NodeJS and PHP libraries. I also regularly contribute back to other projects.</p>
       </div>
     </div>

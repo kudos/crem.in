@@ -8,7 +8,7 @@ Last week my iPhone 6 Plus arrived. Even coming from a 4.9" Android device I was
 
 During the keynote Phil Schiller unveiled Reachability.<!-- more -->
 
-<img src="./reachability-phil-schiller.jpg" />
+![Phil Schiller demos a dumb idea](./reachability-phil-schiller.jpg)
 
 Phil had this to say about it:
 

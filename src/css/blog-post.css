@@ -17,7 +17,7 @@
 }
 
 .blog-post li {
-	list-style: disc;
+	list-style: inherit;
 }
 
 .blog-post-container hr {

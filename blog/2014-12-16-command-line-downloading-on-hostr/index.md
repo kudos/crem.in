@@ -9,17 +9,15 @@ If you have no idea what a command-line is, don't worry, this feature isn't some
 
 You can now download files on Hostr from the command-line using `wget` and `curl`. Perfect for when you're on a remote server and need to grab a file from Hostr.
 
-<!-- more -->
-
-<img src="./cli.gif" class="full-image" alt="Command-line downloading demonstration" />
+![Command-line downloading demonstration](./cli.gif)
 
 Here are some examples:
 
-```terminal
+```bash
 curl -JO https://hostr.co/p4l1wZlvTm27
 ```
 
-```terminal
+```bash
 wget --content-disposition https://hostr.co/p4l1wZlvTm27
 ```
 

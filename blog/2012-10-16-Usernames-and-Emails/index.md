@@ -11,7 +11,7 @@ The signup process should be free of friction to encourage users to complete it.
 
 At this point I'll have already been asked for my email address, which is far more unique than a username. Just use that to identify me.
 
-<img src="./create-account-photo.jpg" class="full-image" alt="" />
+![Dumb account creation process](./create-account-photo.jpg)
 
 One recent encounter I had with this phenomenon was signing up to [name.com](http://name.com). I was forced to choose a username (it only took 4 attempts) and they only allowed me to sign in with that username, which is beyond memorable at this point. It may be that they use this username in some part of their service that has technological limitations in the characters that can be used or perhaps their DNS is sharded on a filesystem using the usernames. But that still doesn't explain forcing the use of usernames instead of emails for authentication.
 

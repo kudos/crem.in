@@ -4,9 +4,11 @@ title: Now playing with screen+irssi over ssh
 date: "2007-11-23T00:00:00.000Z"
 tags:
 ---
-<img src="./picture-2.png" />
+![Irssi screenshot](./picture-2.png)
 
-Some people like using irssi, others again like using it over ssh. When <a href="http://f0rked.com/articles/irssi">combined with screen</a>, this gives you a persistent IRC client that stays online even when you're not connected to your shell account.</p> While this is great, it does come with some caveats. Irssi can't access anything on your local machine, so status scripts, like what you are currently listening to, are out. In steps Brandon Fullers <a href="http://brandon.fuller.name/archives/hacks/nowplaying/">Now Playing</a> plugin for iTunes. The software itself isn't great, you can only transmit the song details over FTP, but it does work. The problem here is that I don't have FTP on the same box as irssi. Here's my solution:<!--more-->Set up now playing to upload your song details to your FTP server. Place the following PHP somewhere web accessible.
+Some people like using irssi, others again like using it over ssh. When [combined with screen](http://f0rked.com/articles/irssi), this gives you a persistent IRC client that stays online even when you're not connected to your shell account.
+
+While this is great, it does come with some caveats. Irssi can't access anything on your local machine, so status scripts, like what you are currently listening to, are out. In steps Brandon Fullers [Now Playing](http://brandon.fuller.name/archives/hacks/nowplaying/) plugin for iTunes. The software itself isn't great, you can only transmit the song details over FTP, but it does work. The problem here is that I don't have FTP on the same box as irssi. Here's my solution: Set up now playing to upload your song details to your FTP server. Place the following PHP somewhere web accessible.
 
 ```php
 $file = "/path/to/Now_Playing.xml";

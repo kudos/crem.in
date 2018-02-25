@@ -6,4 +6,4 @@ tags:
 ---
 Aka "Balla". The most awesome tune in the history of Cork nightlife.
 
-<a href="http://localhostr.com/download/1d5359/Balla.mp3">Download</a>
+[Download](https://hostr.co/1d5359Ba)

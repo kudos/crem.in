@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 
 import Blurb from '../components/Blurb';
 
+import photo from '../content/photo.jpg';
 import '../css/typography.css';
 
 export default class Template extends React.Component {
@@ -40,7 +41,7 @@ export default class Template extends React.Component {
                 textDecoration: 'none',
               }}
             >
-              Jonathan Cremin
+            <img src={photo} className="photo" />  Jonathan Cremin
             </Link>
           </h1>
           <div>

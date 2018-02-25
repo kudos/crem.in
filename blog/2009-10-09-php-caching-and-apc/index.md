@@ -4,6 +4,7 @@ path: "/2009-10-09/php-caching-and-apc"
 date: "2009-10-09T00:00:00.000Z"
 tags:
 ---
+
 A friend asked me recently about the caching options available to him with PHP on a linux stack. While he had looked into memcached and seen the difference it can make, he had overlooked APC.
 
 APC, or Alternative PHP Cache, not only allows for faster pages through opcode caching, but also since v3.0.0, allows for users to store any kind of data in memory for access between and across all requests. See my example below for a better idea on how to use it.

@@ -15,15 +15,23 @@
 }
 
 .resume li {
-	list-style: disc;
+	list-style: inherit;
 }
 
 .print {
   display: none;
 }
 
+.screen {
+  display: inline;
+}
+
 @media print {
   .print {
     display: inline;
+  }
+
+  .screen {
+    display: none;
   }
 }

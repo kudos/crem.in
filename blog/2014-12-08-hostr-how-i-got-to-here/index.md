@@ -11,7 +11,7 @@ I figured I had sufficient PHP chops and my $10 Dreamhost account would be enoug
 
 In early May I put the site online. [Wayback Machine](https://web.archive.org/web/20060521194406/http://beta.localhostr.com/) kindly grabbed a copy.
 
-<img src="./images/localhostr-2006.png" class="full-image" alt="Localhostr homepage in 2006" />
+![Localhostr homepage in 2006](./images/localhostr-2006.png)
 
 For the next few months I would get tens of visitors every day. The site did one thing well and I was pretty happy that anyone other than myself used it.
 
@@ -22,7 +22,7 @@ People seemed to like the way it presented the whole process up front as three s
 
 In hindsight it was an immense opportunity, but I had neither the technical ability or the connections to do anything with. I was still at college and working 4 or 5 days a week just to support myself. Regardless, I was happy to have a project that people liked and used.
 
-<img src="./images/lifehacker-digg.png" class="full-image" alt="Graph showing Digg/Lifehacker traffic spike" />
+![Graph showing Digg/Lifehacker traffic spike](./images/lifehacker-digg.png)
 
 Over the next few years it went through some redesigns and rewrites. I discovered Codeigniter, and rewrote it around that. Quickly realised how terrible Codeigniter was and rewrote it in Kohana. Then decided to build my own micro framework and rewrote it with that.
 
@@ -32,7 +32,7 @@ Somewhere in there I added an API and virus scanning. [Someone](https://twitter.
 
 At the end of 2010 in order to further combat drive-by malware uploaders I forced non-image files to have a download confirmation page. This resulted in a bit of an uptick in page views.
 
-<img src="./images/traffic.png" class="full-image" alt="Graph showing overall traffic levels since 2006" />
+![Graph showing overall traffic levels since 2006](./images/traffic.png)
 
 That gap in 2012 was a period where I trialled an alternative analytics service. I wish I hadn't now. The spike on the far left is Digg.
 
@@ -46,7 +46,7 @@ I coincided this most recent rewrite with a rebrand to Hostr. I had never liked 
 
 That brings us to today, over eight years and a billion downloads later.
 
-<img src="./images/hostr-panel.png" class="full-image" alt="Hostr homepage" />
+![Hostr homepage](./images/hostr-panel.png)
 
 Hostr runs on six boxes at Linode, between web nodes, Mongodb nodes and a staging box. The web nodes also act as a hot cache for files, with S3 acting as cold storage.
 

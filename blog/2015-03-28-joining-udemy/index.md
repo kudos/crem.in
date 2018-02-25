@@ -7,8 +7,6 @@ tags:
 
 At the tail end of last year I was made redundant by [Engine Yard](https://www.engineyard.com). It had been a wonderful three years but the company had some tough financial decisions to make, and a bunch of us got the axe. The family we had built in the Dublin office was already breaking apart, so the timing ended up being pretty good.
 
-<!-- more -->
-
 #### Match Audio and open source
 
 I took the opportunity of this new-found free time to hack on a project I'd been thinking about for a while, using technologies I was interested in learning more about. A week later I open-sourced [Match Audio](https://match.audio), a web app I built using [React](http://facebook.github.io/react/). This was a lot of fun but it also helped a lot when interviewing for jobs.

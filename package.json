@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-blog-starter-kit",
-  "description": "Gatsby blog starter example",
-  "version": "1.2.0",
-  "author": "Dustin Schau <dustinschau@gmail.com> (https://dustinschau.com)",
-  "repository": "https://github.com/dschau/gatsby-blog-starter-kit",
+  "name": "crem.in",
+  "description": "Blog for Jonathan Cremin",
+  "version": "0.0.0",
+  "author": "Jonathan Cremin <jonathan@crem.in> (https://crem.in)",
+  "repository": "https://github.com/kudos/crem.in",
   "dependencies": {
     "gatsby": "~1.9.45",
     "gatsby-link": "~1.6.17",
@@ -26,9 +26,6 @@
     "gh-pages": "1.1.0",
     "prettier": "1.10.2"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {

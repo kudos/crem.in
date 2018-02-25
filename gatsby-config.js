@@ -1,5 +1,6 @@
 module.exports = {
   pathPrefix: process.env.CI ? `/${name}` : `/`,
+  polyfill: false,
   siteMetadata: {
     author: 'Jonathan Cremin',
     title: 'Jonathan Cremin\'s Blog',
@@ -21,7 +22,9 @@ module.exports = {
           {
             resolve: 'gatsby-remark-images',
             options: {
-              linkImagesToOriginal: false
+              maxWidth: 660,
+              linkImagesToOriginal: false,
+              sizeByPixelDensity: true,
             }
           },
           {

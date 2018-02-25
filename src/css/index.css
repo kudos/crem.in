@@ -1,3 +1,10 @@
+.photo {
+  float: left;
+  width: 4.2rem;
+  border-radius: 2.1rem;
+  margin-right: 1rem;
+}
+
 #about {
   font-size: 1.3rem;
   text-align: justify;
