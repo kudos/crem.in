@@ -1,5 +1,4 @@
 #about {
-  font-family: 'PT Serif', serif;
   font-size: 1.3rem;
   text-align: justify;
   margin-top: 1rem;
@@ -7,7 +6,6 @@
 }
 
 .blog-post-preview {
-  font-family: 'PT Serif', serif;
   font-size: 1.3rem;
   display: flex;
   flex-direction: column;

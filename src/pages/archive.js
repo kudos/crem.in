@@ -7,7 +7,7 @@ import '../css/archive.css';
 export default function Archive({ data }) {
   const { edges: posts } = data.allMarkdownRemark;
   return (
-    <div>
+    <div className="archive">
       <h2>Archive</h2>
       <ul>
       {posts

@@ -37,6 +37,9 @@ module.exports = {
         head: false,
       },
     },
+    {
+      resolve: `gatsby-plugin-netlify`,
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp'
   ],
