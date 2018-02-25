@@ -11,20 +11,14 @@ export default function Index({ data }) {
   const post = posts[0];
   return (
     <div className="blog-posts">
-      <div className="blog-post-preview" key={post.node.id}>
+      <div className="blog-post" key={post.node.id}>
         <h3>Latest Post</h3>
         <h2 className="title">
           <GatsbyLink to={post.node.frontmatter.path}>
             {post.node.frontmatter.title}
           </GatsbyLink>
         </h2>
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 660,
-            padding: `1rem 0`,
-          }}
-          dangerouslySetInnerHTML={{ __html: post.node.html }} />
+        <div dangerouslySetInnerHTML={{ __html: post.node.html }} />
       </div>
       <Recent posts={posts} />
     </div>
