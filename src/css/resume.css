@@ -1,0 +1,29 @@
+.resume h2 {
+	font-weight: 200;
+}
+
+.resume h3 {
+	font-weight: 900;
+}
+
+.resume h3 small {
+	font-weight: 500;
+}
+
+.resume ul {
+	margin-left: 2rem;
+}
+
+.resume li {
+	list-style: disc;
+}
+
+.print {
+  display: none;
+}
+
+@media print {
+  .print {
+    display: inline;
+  }
+}

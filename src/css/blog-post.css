@@ -1,0 +1,37 @@
+.blog-post .title, .blog-post .date {
+  margin: 0;
+  padding: 0;
+}
+
+.blog-post .date {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.blog-post {
+  margin-bottom: 3rem;
+}
+
+.blog-post ul {
+	margin-left: 2rem;
+}
+
+.blog-post li {
+	list-style: disc;
+}
+
+.blog-post-container hr {
+	margin-bottom: 3rem;
+}
+
+blockquote {
+	margin: 0;
+	padding: 1rem;
+	background: #eee;
+	border-radius: 0.5rem;
+}
+
+.gatsby-resp-image-wrapper {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
