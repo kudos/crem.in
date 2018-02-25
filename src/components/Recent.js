@@ -8,7 +8,7 @@ export default function Recent({ posts }) {
     	<h3>Recent Posts</h3>
       <ul>
       {posts
-        .filter((post, index) => post.node.frontmatter.title.length > 0 && index > 0 && index < 4)
+        .filter((post, index) => post.node.frontmatter.title.length > 0 && index < 4)
         .map(({ node: post }) => {
           return (
             <li key={post.id}>
