@@ -10,21 +10,23 @@
     "gatsby-plugin-catch-links": "~1.0.1",
     "gatsby-plugin-google-analytics": "^1.0.19",
     "gatsby-plugin-netlify": "^1.0.18",
-    "gatsby-plugin-react-helmet": "~1.0.1",
+    "gatsby-plugin-react-helmet": "~2.0.11",
     "gatsby-plugin-react-next": "~1.0.4",
     "gatsby-plugin-sharp": "~1.6.8",
     "gatsby-remark-images": "~1.5.13",
-    "gatsby-remark-prismjs": "^1.2.15",
+    "gatsby-remark-prismjs": "~2.0.2",
     "gatsby-source-filesystem": "~1.5.1",
     "gatsby-transformer-remark": "~1.7.12",
     "moment": "^2.20.1",
-    "react": "~16.2.0",
-    "react-dom": "~16.2.0",
+    "prismjs": "^1.14.0",
+    "react": "~16.3.2",
+    "react-dom": "~16.3.2",
+    "react-helmet": "^5.2.0",
     "react-icons": "~2.2.5"
   },
   "devDependencies": {
     "gh-pages": "1.1.0",
-    "prettier": "1.10.2"
+    "prettier": "1.12.1"
   },
   "license": "MIT",
   "main": "n/a",

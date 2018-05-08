@@ -153,7 +153,7 @@ export default function Resume() {
       <div className="projects">
         <h2>Personal Projects</h2>
 
-        <h3>Hostr <a href="https://hostr.co" className='screen'><InsertLink size='1.5rem' color='#1EAEDB' /></a> <a href="https://github.com/kudos/hostr" className='screen'><Octocat size='1.5rem' color='#1EAEDB' /></a> <span className="print">(https://hostr.co)</span></h3>
+        <h3>Hostr <a href="https://hostr.co" className='screen'><InsertLink size='0.7em' color='#1EAEDB' /></a> <a href="https://github.com/kudos/hostr" className='screen'><Octocat size='0.7em' color='#1EAEDB' /></a> <span className="print">(https://hostr.co)</span></h3>
         <p>With a slick interface, serving up over a billion downloads and with over a hundred thousand registered users, Hostr provides a quick and easy way to share files.
         </p>
         <p>This was a side project I started in 2006 and it's now open source.
@@ -161,13 +161,13 @@ export default function Resume() {
         I use it as a testbed for new technologies I want to play around with.</p>
         <p>I've also built a companion <a href="https://github.com/kudos/hostr-mac">Mac menu bar app</a> with Cocoa/Obj-C and a never-released iOS app.</p>
 
-        <h3>Combine.fm <a href="https://combine.fm" className='screen'><InsertLink size='1.5rem' color='#1EAEDB' /></a> <a href="https://github.com/kudos/combine.fm" className='screen'><Octocat size='1.5rem' color='#1EAEDB' /></a> <span className="print">(https://combine.fm)</span></h3>
+        <h3>Combine.fm <a href="https://combine.fm" className='screen'><InsertLink size='0.7em' color='#1EAEDB' /></a> <a href="https://github.com/kudos/combine.fm" className='screen'><Octocat size='0.7em' color='#1EAEDB' /></a> <span className="print">(https://combine.fm)</span></h3>
         <p>Combine.fm takes links from various music subscription services and returns a page containing matching links to all other services to allow broader sharing.</p>
 
         <p>I started this in December 2014 as an excuse to build something isomorphically with React.
           It has been developed from the beginning as an open source project.</p>
 
-        <h3>Others <a href="https://github.com/kudos" className='screen'><Octocat size='1.5rem' color='#1EAEDB' /></a> <span className="print">(https://github.com/kudos)</span></h3>
+        <h3>Others <a href="https://github.com/kudos" className='screen'><Octocat size='0.7em' color='#1EAEDB' /></a> <span className="print">(https://github.com/kudos)</span></h3>
         <p>I've published some other small projects on Github, including Python, NodeJS and PHP libraries. I also regularly contribute back to other projects.</p>
       </div>
     </div>
