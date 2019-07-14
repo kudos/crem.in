@@ -1,43 +1,97 @@
-import React from 'react';
-import Helmet from 'react-helmet';
+import React from "react"
+import { Link, graphql } from "gatsby"
 
-import Blurb from '../components/Blurb';
-import Recent from '../components/Recent';
+import Bio from "../components/bio"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import { rhythm, scale } from "../utils/typography"
 
-import '../css/blog-post.css';
+class BlogPostTemplate extends React.Component {
+  render() {
+    const post = this.props.data.markdownRemark
+    const siteTitle = this.props.data.site.siteMetadata.title
+    const { previous, next } = this.props.pageContext
 
-export default function Template({ data, pathContext }) {
-  const { markdownRemark: post } = data;
-  const { posts } = pathContext;
-  return (
-    <div className="blog-post-container">
-      <Helmet title={`Jonathan Cremin - ${post.frontmatter.title}`} />
-      <div className="blog-post">
-        <h2 className="title">
-          {post.frontmatter.title}
-        </h2>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: post.html }}
+    return (
+      <Layout location={this.props.location} title={siteTitle}>
+        <SEO
+          title={post.frontmatter.title}
+          description={post.frontmatter.description || post.excerpt}
         />
-      </div>
-      <hr />
-      <Blurb />
-      <hr />
-      <Recent posts={posts} />
-    </div>
-  );
+        <h1
+          style={{
+            marginTop: rhythm(1),
+            marginBottom: 0,
+          }}
+        >
+          {post.frontmatter.title}
+        </h1>
+        <p
+          style={{
+            ...scale(-1 / 5),
+            display: `block`,
+            marginBottom: rhythm(1),
+          }}
+        >
+          {/* {post.frontmatter.date} */}
+        </p>
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <hr
+          style={{
+            marginTop: rhythm(2),
+            marginBottom: rhythm(2),
+          }}
+        />
+        <Bio />
+
+        <ul
+          style={{
+            display: `flex`,
+            flexWrap: `wrap`,
+            justifyContent: `space-between`,
+            listStyle: `none`,
+            padding: 0,
+          }}
+        >
+          <li>
+            {previous && (
+              <Link to={previous.fields.slug} rel="prev">
+                ← {previous.frontmatter.title}
+              </Link>
+            )}
+          </li>
+          <li>
+            {next && (
+              <Link to={next.fields.slug} rel="next">
+                {next.frontmatter.title} →
+              </Link>
+            )}
+          </li>
+        </ul>
+      </Layout>
+    )
+  }
 }
 
+export default BlogPostTemplate
+
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query BlogPostBySlug($slug: String!) {
+    site {
+      siteMetadata {
+        title
+        author
+      }
+    }
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      id
+      excerpt(pruneLength: 160)
       html
       frontmatter {
-        date
-        path
         title
+        path
+        date(formatString: "MMMM DD, YYYY")
       }
     }
   }
-`;
+`

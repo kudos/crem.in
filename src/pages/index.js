@@ -1,44 +1,117 @@
-import React from 'react';
-import GatsbyLink from 'gatsby-link';
+import React from "react"
+import { Link, graphql } from "gatsby"
 
-import Recent from '../components/Recent';
+import Bio from "../components/bio"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import { rhythm } from "../utils/typography"
 
-import '../css/index.css';
-import '../css/monokai.css'
-
-export default function Index({ data }) {
-  const { edges: posts } = data.allMarkdownRemark;
-  const post = posts[0];
-  return (
-    <div className="blog-posts">
-      <div className="blog-post" key={post.node.id}>
-        <h3>Latest Post</h3>
-        <h2 className="title">
-          <GatsbyLink to={post.node.frontmatter.path}>
-            {post.node.frontmatter.title}
-          </GatsbyLink>
-        </h2>
-        <div dangerouslySetInnerHTML={{ __html: post.node.html }} />
-      </div>
-      <Recent posts={posts} />
-    </div>
-  );
+class BlogIndex extends React.Component {
+  render() {
+    const { data } = this.props
+    const siteTitle = data.site.siteMetadata.title
+    const { avatar, author } = data
+    const posts = data.allMarkdownRemark.edges
+    const latestPost = posts[0].node
+    return (
+      <Layout location={this.props.location} title={siteTitle} avatar={avatar} author={author}>
+        <SEO />
+        <Bio />
+        <hr
+          style={{
+            marginBottom: rhythm(2),
+          }}
+        />
+        <h4>
+          Latest Post
+        </h4>
+        <div>
+          <h3
+            style={{
+              marginBottom: rhythm(1 / 4),
+            }}
+          >
+            <Link style={{ boxShadow: `none` }} to={latestPost.fields.slug}>
+              {latestPost.frontmatter.title || latestPost.fields.slug}
+            </Link>
+          </h3>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: latestPost.html,
+            }}
+          />
+        </div>
+        <hr
+          style={{
+            marginTop: rhythm(2),
+            marginBottom: rhythm(2),
+          }}
+        />
+        <h4>
+          Recent Posts
+        </h4>
+        <ul>
+        {posts.map(({ node }, count) => {
+          const title = node.frontmatter.title || node.fields.slug
+          if (count === 0) {
+            return false
+          }
+          return (
+            <li key={node.fields.slug}>
+              <h5
+                style={{
+                  marginBottom: rhythm(1 / 4),
+                }}
+              >
+                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                  {title}
+                </Link> <small>— {node.frontmatter.date}</small>
+              </h5>
+            </li>
+          )
+        })}
+        </ul>
+        <div style={{textAlign: `right`}}>
+          <Link to={`/archive`}>
+            View More
+          </Link>
+        </div>
+      </Layout>
+    )
+  }
 }
 
+export default BlogIndex
+
 export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+  query {
+    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+      childImageSharp {
+        fixed(width: 128, height: 128) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    site {
+      siteMetadata {
+        author
+        title
+      }
+    }
+    allMarkdownRemark(limit: 5, sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
+          excerpt
           html
-          id
+          fields {
+            slug
+          }
           frontmatter {
+            date(formatString: "DD MMM YYYY")
             title
-            date
-            path
           }
         }
       }
     }
   }
-`;
+`

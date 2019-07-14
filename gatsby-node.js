@@ -1,46 +1,71 @@
-const path = require('path');
+const path = require(`path`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
 
-  const blogPostTemplate = path.resolve(`src/templates/blog-post.js`);
-  return graphql(`{
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 1000
-    ) {
-      edges {
-        node {
-          html
-          id
-          timeToRead
-          frontmatter {
-            date
-            path
-            title
+  const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  return graphql(
+    `
+      {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              html
+              id
+              timeToRead
+              fields {
+                slug
+              }
+              frontmatter {
+                date
+                path
+                title
+              }
+            }
           }
         }
       }
-    }
-  }`)
-  .then(result => {
+    `
+  ).then(result => {
     if (result.errors) {
-      return Promise.reject(result.errors)
+      throw result.errors
     }
 
-    const posts = result.data.allMarkdownRemark.edges;
+    // Create blog posts pages.
+    const posts = result.data.allMarkdownRemark.edges
 
-    // Create pages for each markdown file.
-    posts.forEach(({ node }, index) => {
+    posts.forEach((post, index) => {
+      const previous = index === posts.length - 1 ? null : posts[index + 1].node
+      const next = index === 0 ? null : posts[index - 1].node
+
       createPage({
-        path: node.frontmatter.path,
-        component: blogPostTemplate,
+        path: post.node.fields.slug,
+        component: blogPost,
         context: {
-          posts
-        }
-      });
-    });
+          slug: post.node.fields.slug,
+          previous,
+          next,
+        },
+      })
+    })
 
-    return posts;
+    return null
   })
-};
+}
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+
+  if (node.internal.type === `MarkdownRemark`) {
+    const value = createFilePath({ node, getNode })
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    })
+  }
+}

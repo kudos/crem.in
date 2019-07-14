@@ -1,45 +1,83 @@
-import React from 'react';
-import GatsbyLink from 'gatsby-link';
-import moment from 'moment';
+import React from "react"
+import { Link, graphql } from "gatsby"
 
-import '../css/archive.css';
+import Bio from "../components/bio"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import { rhythm } from "../utils/typography"
 
-export default function Archive({ data }) {
-  const { edges: posts } = data.allMarkdownRemark;
-  return (
-    <div className="archive">
-      <h2>Archive</h2>
-      <ul>
-      {posts
-        .filter((post, index) => post.node.frontmatter.title.length > 0 && index > 0)
-        .map(({ node: post }) => {
+class BlogIndex extends React.Component {
+  render() {
+    const { data } = this.props
+    const siteTitle = data.site.siteMetadata.title
+    const { avatar, author } = data
+    const posts = data.allMarkdownRemark.edges
+
+    return (
+      <Layout location={this.props.location} title={siteTitle} avatar={avatar} author={author}>
+        <SEO title="All posts" />
+        <Bio />
+        <hr
+          style={{
+            marginBottom: rhythm(2),
+          }}
+        />
+        <h4>
+          Archive
+        </h4>
+        {posts.map(({ node }) => {
+          const title = node.frontmatter.title || node.fields.slug
           return (
-            <li key={post.id}>
-              <GatsbyLink to={post.frontmatter.path}>
-                {post.frontmatter.title}
-              </GatsbyLink>
-              <small> — {moment(post.frontmatter.date).format("Do MMM YYYY")}</small>
-            </li>
-          );
+            <ul>
+              <li key={node.fields.slug}>
+                <h5
+                  style={{
+                    marginBottom: rhythm(1 / 4),
+                  }}
+                >
+                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                    {title}
+                  </Link> <small>— {node.frontmatter.date}</small>
+                </h5>
+              </li>
+            </ul>
+          )
         })}
-      </ul>
-    </div>
-  );
+      </Layout>
+    )
+  }
 }
 
+export default BlogIndex
+
 export const pageQuery = graphql`
-  query ArchiveQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+  query {
+    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+      childImageSharp {
+        fixed(width: 128, height: 128) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    site {
+      siteMetadata {
+        author
+        title
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          id
+          excerpt
+          fields {
+            slug
+          }
           frontmatter {
+            date(formatString: "DD MMM YYYY")
             title
-            date
-            path
           }
         }
       }
     }
   }
-`;
+`
