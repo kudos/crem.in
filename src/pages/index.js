@@ -35,11 +35,7 @@ class BlogIndex extends React.Component {
               {latestPost.frontmatter.title || latestPost.fields.slug}
             </Link>
           </h3>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: latestPost.html,
-            }}
-          />
+          <div dangerouslySetInnerHTML={{ __html: latestPost.html }} />
         </div>
         <hr
           style={{

@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 import Image from "gatsby-image"
 
 import { rhythm, scale } from "../utils/typography"
@@ -97,20 +97,3 @@ class Layout extends React.Component {
 
 export default Layout
 
-export const pageQuery = graphql`
-  query {
-    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
-      childImageSharp {
-        fixed(width: 128, height: 128) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    site {
-      siteMetadata {
-        author
-        title
-      }
-    }
-  }
-`
