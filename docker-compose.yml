@@ -9,4 +9,4 @@ services:
       - ./:/app
     ports:
       - "3000:3000"
-    command: npm develop -H 0.0.0.0
+    command: yarn develop
