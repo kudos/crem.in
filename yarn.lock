@@ -14034,10 +14034,10 @@ typeface-lato@0.0.75:
   resolved "https://registry.yarnpkg.com/typeface-lato/-/typeface-lato-0.0.75.tgz#8aa11c5611dc38416837c089b265a2abd1f7dd31"
   integrity sha512-iA5uJD4PSTyIE4BDiSOexQeXkDkiJuX4Hu3wh3saJ06EB2TvJayab1Lbbmqq2je/LQv7KCQZHZmC0k4hedd8sw==
 
-typeface-pt-serif@0.0.72:
-  version "0.0.72"
-  resolved "https://registry.yarnpkg.com/typeface-pt-serif/-/typeface-pt-serif-0.0.72.tgz#d8761c02a298bd0203e53a2028081b6f03246cd5"
-  integrity sha512-R/ZnbjL3H8mfeWrkYSU1fCk8TAsz+dyw+W5jnqlXXJPcsdu7sT/cGJGqx02zskaMeDCHwdNfTCORN8/NxN7x9w==
+typeface-pt-serif@1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-pt-serif/-/typeface-pt-serif-1.1.13.tgz#5ce7d20b3e8dcdc299c48fc98867878616a06db2"
+  integrity sha512-37MoOU/92sONmjprYTffl4/1Vq+CTL11iGr+54R3F9VAVFSA53aZmCHyDO2PLLGKmg5hHiLxU4JcxRYNfvx8rA==
 
 typography-breakpoint-constants@^0.16.19:
   version "0.16.19"
