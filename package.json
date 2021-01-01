@@ -28,7 +28,7 @@
     "gatsby-transformer-sharp": "^2.9.0",
     "prism-themes": "^1.4.0",
     "prismjs": "^1.21.0",
-    "react": "^16.13.1",
+    "react": "^16.14.0",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^3.10.0",
