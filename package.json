@@ -33,7 +33,7 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^3.10.0",
     "react-typography": "^0.16.19",
-    "typeface-lato": "0.0.75",
+    "typeface-lato": "1.1.13",
     "typeface-pt-serif": "0.0.72",
     "typography": "^0.16.19",
     "typography-theme-wordpress-2016": "^0.16.19"
