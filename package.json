@@ -8,7 +8,7 @@
     "url": "https://github.com/kudos/crem.in/issues"
   },
   "dependencies": {
-    "gatsby": "^2.27.5",
+    "gatsby": "^2.31.1",
     "gatsby-image": "^2.8.0",
     "gatsby-plugin-feed": "^2.10.0",
     "gatsby-plugin-google-analytics": "^2.3.4",
